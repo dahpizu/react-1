@@ -1,8 +1,12 @@
 import Movie from "./movie";
+import React from "react";
+import "./stylesheet.css";
 function App() {
-  <div>
-    <Movie />
-  </div>;
+  return (
+    <div>
+      <Movie />
+    </div>
+  );
 }
 
 export default App;
