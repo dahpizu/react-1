@@ -1,62 +1,193 @@
 * {
-  box-sizing: border-box;
-}
-body {
   margin: 0;
-  color: white;
-  height: 80px;
-  overflow: hidden;
-  background-color: green;
-  font-size: 1.3rem;
 }
-.opt {
+.body {
+  font-family: sans-serif;
+}
+.navbar {
+  width: 100%;
+  height: 50px;
   background-color: black;
+}
+.navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-ul {
-  display: flex;
-  gap: 60px;
-  list-style-type: none;
-}
-.icon {
-  color: white;
-  gap: 10px;
-  display: flex;
-  padding-right: 20px;
-}
-.movie-container {
-  color: white;
-}
-
-.search-input {
-  color: white;
-  background-color: rgb(39, 38, 38);
-  border: none;
-}
-.search {
-  padding: 5px;
-  width: 300px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgb(39, 38, 38);
-  display: flex;
-  gap: 10px;
-}
-.left-nav {
   background-color: black;
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  height: 763px;
-  gap: 50px;
-  padding: 20px;
+  padding: 0 50px;
+  height: 100%;
 }
-.logout {
-  margin-top: 200px;
+.logo-container {
+  flex: 1;
+  background-color: black;
 }
 .logo-icon {
-  padding-left: 23px;
+  font-size: 30px;
+  color: white;
+}
+.profile-container {
+  flex: 1;
+  display: flex;
+  background-color: black;
+  color: white;
+  margin-right: 10px;
+}
+.profile-icon {
+  margin-right: 20px;
+  font-size: 20px;
+}
+.search-container {
+  display: flex;
+  flex: 4;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.seach-input {
+  background-color: rgb(43, 42, 42);
+  border: none;
+  border-radius: 10px;
+  width: 300px;
+}
+.menu-container {
+  flex: 5;
+  background-color: black;
+  color: white;
+}
+.menu-list {
+  display: flex;
+  list-style-type: none;
+}
+.menu-list-item {
+  margin-right: 50px;
+}
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+}
+.sidebar-icon {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.sidebar-icon1 {
+  color: green;
+  margin-top: 300px;
+  font-size: 20px;
+}
+.logo-icon {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.container {
+  background-color: black;
+  min-height: calc(100vh - 50px);
+  /* width: 200vh; */
+  color: white;
+  margin-left: 50px;
+}
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+}
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-rate,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+.movie-list-contaier {
+  background-color: green;
+  display: flex;
+  gap: 10px;
+}
+.movie-list-container {
+  padding: 20px;
+}
+.movie-list-item-img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  transition: 1s all ease-in-out;
+}
+.movie-list-item-title {
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 60px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.movie-list-item-rate {
+  padding: 10px;
+  font-size: 25px;
+  width: 30px;
+  position: absolute;
+  top: 40%;
+  left: 50px;
+  opacity: 0;
+}
+.movie-list-item-button {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  opacity: 0;
+}
+.number-1 {
+  font-size: 120px;
+  position: absolute;
+  top: 200px;
+  left: 2%;
+  opacity: 0;
+}
+.number-2 {
+  font-size: 120px;
+  position: absolute;
+  top: 200px;
+  left: 23%;
+  opacity: 0;
+}
+.number-3 {
+  font-size: 120px;
+  position: absolute;
+  top: 200px;
+  left: 44%;
+  opacity: 0;
+}
+.number-4 {
+  font-size: 120px;
+  position: absolute;
+  top: 200px;
+  left: 65%;
+  opacity: 0;
+}
+.movie-list-wrapper:hover .number-1,
+.movie-list-wrapper:hover .number-2,
+.movie-list-wrapper:hover .number-3,
+.movie-list-wrapper:hover .number-4 {
+  opacity: 1;
 }
