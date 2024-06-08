@@ -8,8 +8,8 @@ function MovieCard(props) {
         src="../public/images/KOS.jpeg"
         alt=""
       />
-      <span className="movie-list-item-title">King Of Boys</span>
-      <p className="movie-list-item-rate">5.2</p>
+      <span className="movie-list-item-title">{props.movie.title}</span>
+      <p className="movie-list-item-rate">{props.movie.rate}</p>
       <button className="movie-list-item-button">watch</button>
     </div>
   );

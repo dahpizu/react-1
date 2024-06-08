@@ -7,15 +7,15 @@ const movies = [
 ];
 
 export const NewRelease = (props) => {
+  const movie = { title: "movie title ", rate: 3.4 };
   return (
     <div className="movie-list-container">
       <h1>New Release</h1>
       <div className="movie-list-wrapper">
         <div className="movie-list">
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
+          {movies.map((item) => (
+            <MovieCard movie={item} />
+          ))}
         </div>
       </div>
     </div>
