@@ -1,10 +1,10 @@
-import Movie from "./movie";
 import React from "react";
 import "./stylesheet.css";
+import Home from "./movie";
 function App() {
   return (
     <div>
-      <Movie />
+      <Home />
     </div>
   );
 }
