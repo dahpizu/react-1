@@ -1,10 +1,17 @@
 import React from "react";
 import "./stylesheet.css";
-import Home from "./movie";
+import Home from "./Home";
+import SingleMovie from "./movie";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div>
-      <Home />
+      <Router>
+        <Routes>
+          <Route path="/" index Component={Home} />
+          <Route path="/movie/:id" Component={SingleMovie} />
+        </Routes>
+      </Router>
     </div>
   );
 }
