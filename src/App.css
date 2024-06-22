@@ -1,0 +1,21 @@
+.navigation-list {
+  list-style-type: none;
+  li {
+    display: inline-block;
+    margin-left: 15px;
+    .navigation-list__item--active {
+      text-decoration: none;
+    }
+  }
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.navigation-list__item--active {
+  text-decoration: none;
+}

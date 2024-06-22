@@ -1,0 +1,14 @@
+.button {
+  @extend %button-shared;
+  background-color: $primary-color;
+}
+
+.button__secondary {
+  @extend %button-shared;
+  background-color: $secondary-color;
+}
+
+.button__tertiary {
+  @extend %button-shared;
+  background-color: $tertiary-color;
+}

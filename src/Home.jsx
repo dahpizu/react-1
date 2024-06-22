@@ -8,25 +8,20 @@ import Navbar from "./Navbar";
 import Sidebar from "./Sidbar";
 import MyFavMovie from "./MyFavMovie";
 import { NewRelease } from "./NewRelease";
-
+import useCounter from "./useCounter";
+import useFeatchData from "./useCounter";
+const url =
+  "https://api.themoviedb.org/3/movie/top_rated?api_key=01947fdc028668cbba608f3d08618bef&language=en-US";
 function Home() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const options = { method: "GET" };
-    fetch(
-      "https://api.themoviedb.org/3/movie/top_rated?api_key=01947fdc028668cbba608f3d08618bef&language=en-US",
-      options
-    )
-      .then((res) => res.json())
-      .then((res) => setData(res.results));
-  }, []);
+  const [data, isLoading] = useFeatchData(url);
+
   return (
     <div className="body">
       <Navbar />
       <Sidebar />
       <div className="container">
         <MyFavMovie />
-        <NewRelease movies={data} />
+        <NewRelease movies={data} isLoading={isLoading} />
       </div>
     </div>
   );
